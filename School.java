@@ -4,13 +4,12 @@
 
 public String runLength(String){
 		 
-		int num = 0
+		int num = 0;
 		
 		for(int i = 0; i < str.length()-1; ++i){
 			
-			if(str.toString(str.charAt(i)) == str.toString(str.charAt(0)));
+			if(str.toString(str.charAt(i)) == str.toString(str.charAt(i)));
 				num++;
-					if(str.toString(str.charAt(i)) != str.toString(str.charAt(0)));	
 		}
 	return num + str.toString(str.charAt(i));
 }
