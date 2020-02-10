@@ -1,3 +1,7 @@
+import javax.swing.* ;
+import java.awt.event.* ;	
+
+
 class robertD{
 	
 	Moneys[] pocketChange;
@@ -38,7 +42,7 @@ class dinero{
 	public static void main(String... v){
 		robertD Duckets = new robertD();
 		
-		Duckets.pocketChange = new robertD.Moneys[1];
+		Duckets.pocketChange = new robertD.Moneys[2];//number of times "coin" pops up.
 		
 		
 		// give each of the coins a value
@@ -46,25 +50,42 @@ class dinero{
 		
 			for(robertD.Moneys coin: Duckets.pocketChange){ //might need different for loop
 				System.out.println(coin = robertD.Moneys.dime);
-				for(robertD.Moneys coin: Duckets.pocketChange){
-					System.out.println(coin = robertD.Moneys.penny);
-					for(robertD.Moneys coin: Duckets.pocketChange){
-						System.out.println(coin = robertD.Moneys.halfdollar);				
-						for(robertD.Moneys coin: Duckets.pocketChange){
-							System.out.println(coin = robertD.Moneys.quarter);
-						}
-					}
-				}
-			}
+				System.out.println(coin = robertD.Moneys.penny);
 	
 				
-			Duckets.pocketChange[0] = coin;
-	}
-		
+					Duckets.pocketChange[0] = coin; //value attached to the last
+				
+			}
 		System.out.println(Duckets.getValue(Duckets.pocketChange[0]) );
-}	//Show me the coins in your pocketChange.
+	}	//Show me the coins in your pocketChange.
 		
-		
+}
 		//Give me the sum of those coins.
-		
+class robert extends JFrame //implements ActionListener, ItemListener 
+{
+	JPanel pnl = new JPanel() ;
+	JTextArea txtArea = new JTextArea (8,38);
+	JTextArea txtArea1 = new JTextArea (4,20);
+	JButton btn1 = new JButton ("Whats in your Wallet?");
+
+	public robert (){
+		super("Pocket Change");
+		setSize(1000,300);
+		setDefaultCloseOperation( EXIT_ON_CLOSE );
+		add(pnl);
 	
+		pnl.add( btn1 ) ;
+
+		pnl.add( txtArea ) ;
+		pnl.add( txtArea1 ) ;
+		setVisible( true );
+	}
+	/*public void actionPerformed( ActionEvent event ){
+	if( event.getSource() == btn1) 
+		JOptionPane.showMessageDialog(this ,"This is what you got in your pocket");*/
+	public static void main( String[] args ){
+	
+			robert gui = new robert();
+		
+		}
+}
