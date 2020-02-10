@@ -8,7 +8,7 @@ public String runLength(String){
 		
 		for(int i = 0; i < str.length()-1; ++i){
 			
-			if(str.toString(str.charAt(i)) == str.toString(str.charAt(i)));
+			if(str.toString(str.charAt(i)) == str.toString(str.charAt(i+1)));
 				num++;
 		}
 	return num + str.toString(str.charAt(i));
