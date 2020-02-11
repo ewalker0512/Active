@@ -41,28 +41,28 @@ class robertD{
 class dinero{
 	public static void main(String... v){
 		robertD Duckets = new robertD();
+		robertD Buckets = new robertD();
 		
-		Duckets.pocketChange = new robertD.Moneys[2];//number of times "coin" pops up.
-		
-		
-		// give each of the coins a value
-		
-		
-			for(robertD.Moneys coin: Duckets.pocketChange){ //might need different for loop
+		Duckets.pocketChange = new robertD.Moneys[1];//number of iterations
+			for(robertD.Moneys coin: Duckets.pocketChange){ 
 				System.out.println(coin = robertD.Moneys.dime);
-				System.out.println(coin = robertD.Moneys.penny);
-	
-				
-					Duckets.pocketChange[0] = coin; //value attached to the last
-				
+					Duckets.pocketChange[0] = coin; //value attached to the last iteration in the for loop
+					System.out.println(Duckets.getValue(Duckets.pocketChange[0]));
 			}
-		System.out.println(Duckets.getValue(Duckets.pocketChange[0]) );
-	}	//Show me the coins in your pocketChange.
-		
+		Buckets.pocketChange = new robertD.Moneys[1];
+			for(robertD.Moneys coin: Buckets.pocketChange){
+				System.out.println(coin = robertD.Moneys.quarter);
+					Buckets.pocketChange[0] = coin;
+					System.out.println(Buckets.getValue(Buckets.pocketChange[0]));
+			}
+	System.out.print("You have a total of: ");
+	System.out.println( Duckets.getValue(Duckets.pocketChange[0]) +
+						Buckets.getValue(Buckets.pocketChange[0]));
+	}
+	
 }
-		//Give me the sum of those coins.
-class robert extends JFrame //implements ActionListener, ItemListener 
-{
+		
+class robert extends JFrame implements ActionListener {
 	JPanel pnl = new JPanel() ;
 	JTextArea txtArea = new JTextArea (8,38);
 	JTextArea txtArea1 = new JTextArea (4,20);
@@ -75,17 +75,20 @@ class robert extends JFrame //implements ActionListener, ItemListener
 		add(pnl);
 	
 		pnl.add( btn1 ) ;
-
+		btn1.addActionListener(this);
 		pnl.add( txtArea ) ;
 		pnl.add( txtArea1 ) ;
 		setVisible( true );
 	}
-	/*public void actionPerformed( ActionEvent event ){
+	public void actionPerformed( ActionEvent event ){
 	if( event.getSource() == btn1) 
-		JOptionPane.showMessageDialog(this ,"This is what you got in your pocket");*/
-	public static void main( String[] args ){
+		JOptionPane.showMessageDialog(this ,"You got a hole in your pocket and lost all your money");
+		
+	}
+		public static void main( String[] args ){
 	
 			robert gui = new robert();
 		
 		}
-}
+	
+} 
